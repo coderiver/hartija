@@ -1,49 +1,333 @@
-// # SHORT HOWTO
-// ## Sprites
-//     .whatever
-//          +sized-sprite($icons, coderiver) //or
-// 			+s(codedby) //gets default value for spritemap as $icons
-// ### animation example
-//     +include keyframes(rotate)
-//        from
-//           +rotate(0)
-//        to
-//           +rotate(360)
-// ## animation usage
-//     body:hover
-// 	    +animation(rotate 200s linear infinite)
-// ## animations easing, see easings.net for full list and examples, tnx @ai
-//     transition: all 1.2s ceaser($ease-in)
-// ## gradient example
-//     +background-image(linear-gradient(#232323, #5c5c5c));
-//     +g(#232323, #5c5c5c);
-//	   horizontal
-//     +gh(#232323, #5c5c5c);
-// ## making bw-images
-//     img
-//			@extend %gray
-// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
-//     +min-screen(320)
-//			display: none
-// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
-//
-// ## use cycles
-//     @for $i from 1 through 3
-//       .item-#{$i}
-//			width: 2em * $i;
-//     @each $s in a,b,c
-// 	    	#{$s}
-//				display: none
-// ## fonts 
-// Save fonts to /css/fonts, after that write (eot, woff, ttf):
-// +font(book, cytiapro-black-webfont)  
-// =book
-// 	font-family: "book",arial,sans-serif 
-	
+/*-------------------------  -------------------------*/
+
+/*------------------------- fonts -------------------------*/
++font(ProximaNova-Reg, ProximaNova-Reg)
+=n
+	font-family: "ProximaNova-Reg", arial, sans-serif
+
++font(ProximaNova-Bold, ProximaNova-Bold)
+=p_b
+	font-family: "ProximaNova-Bold", arial, sans-serif
+
++font(BlissPro-Regular, BlissPro-Regular)
+=b
+	font-family: "BlissPro-Regular", arial, sans-serif
+
++font(BlissPro-Heavy, BlissPro-Heavy)
+=b_h
+	font-family: "BlissPro-Heavy", arial, sans-serif
+/*------------------------- general -------------------------*/
 body
-	font-size: 12px 
-	font-family: Arial, sans-serif 
-	line-height: 1.4
+	font-size: 14px 
+	line-height: 1.2
+	+n
+.out
+	width: 1235px
+	margin: 0 auto
+.wrap
+	padding: 50px 0
+	border-bottom: 3px solid #979797
+	overflow: hidden
+.title
+	text-transform: uppercase
+	font-size: 18px
+	color: #E1001B
+	+p_b
+	a
+		font-size: 18px
+		color: #E1001B
+		text-decoration: none
+		+p_b
+// two-coll
+.title-black
+	text-decoration: underline
+	font-size: 18px
+	color: #000
+	+p_b
+	&:hover
+		text-decoration: none
+/*------------------------- header & topper -------------------------*/
+.header
+	padding: 19px 0 35px
+	border-bottom: 2px solid #979797 
+	+clr
+	.date
+		margin-bottom: 5px
+	.pda
+		margin-bottom: 25px
+.header__left
+	width: 280px
+	float: left
+.header__right
+	width: 265px
+	float: right
+	.lang
+		margin-bottom: 25px
+.header__right-label
+	margin-top: 25px
+	text-align: right
+	a
+		margin-left: 30px
+		font-size: 14px
+		text-transform: uppercase
+		color: #000 
+		+p_b
+		&:hover
+			text-decoration: none
+		&:active
+			color: #e0001b
+		&:first-child
+			margin-left: 0
+.header__center 
+	margin: 0 265px 0 280px
+	overflow: hidden
+.logo
+	display: inline-block
+	+s(logo)
+	+hide-text
+.header__news
+	margin-top: 25px
+	margin-left: -33px
+	+clr
+.header__news-item
+	width: 199px
+	margin-left: 33px
+	float: left
+	text-decoration: none
+	font-size: 14px
+	color: #000 
+	+p_b
+	&:hover
+		color: #E1001B
+/*------------------------- footer -------------------------*/
+.footer
+	padding: 40px 0 0 
+	margin-top: 49px
+	border-top: 2px solid #979797
+.footer__logo
+	ul
+		+clr
+	li
+		float: left
+		margin-left: 135px
+		&:first-child
+			margin-left: 0
+		&.footer__logo-1
+			margin-left: 18px
+			margin-top: 10px
+		&.footer__logo-2, &.footer__logo-3
+			margin-top: 10px
+		&.footer__logo-5
+			margin-top: 11px
+			margin-left: 133px
+		&.footer__logo-6
+			margin-top: 20px
+			margin-left: 142px
+.footer__cat
+	margin-top: 30px
+	padding: 18px 0
+	border-top: 1px solid #979797
+	border-bottom: 1px solid #979797
+	a
+		margin-right: 14px
+		text-transform: uppercase
+		line-height: 1.6 
+		font-size: 14px
+		color: #000
+		text-decoration: none
+		position: relative
+		+p_b
+		&:before
+			content: ""
+			width: 4px
+			height: 4px
+			background: #000 
+			+border-radius(50%)
+			position: absolute
+			right: -10px
+			top: 7px
+		&:hover
+			color: #e1001b
+.footer__bottom
+	padding: 28px 0 43px
+	+clr
+	.footer__stat
+		float: left
+	.footer__copy
+		display: inline-block
+		float: right
+		a
+			color: #EB1C23
+			text-decoration: underline
+			&:hover
+				text-decoration: none
+/*------------------------- block -------------------------*/
+.date
+	text-transform: uppercase
+	color: #979797
+	font-size: 10px
+.time
+	font-size: 14px
+	color: #000 
+	+b_h
+.num
+	font-size: 14px
+	color: #E1001B
+	+p_b
+.pda
+	font-size: 12px
+	color: #000 
+.lang
+	font-size: 12px
+	text-align: right
+	a
+		color: #A7A7A7
+		text-decoration: none
+		&:hover
+			color: #E1001B
+			text-decoration: none
+	.is-active
+		color: #000
+		text-decoration: underline
+// preview
+.preview
+.preview__media
+	width: 450px
+	height: 280px
+	overflow: hidden
+	margin-bottom: 15px
+	img
+		max-width: 100% 
+.preview__title
+	margin-bottom: 10px
+	font-size: 24px
+	color: #010101
+	text-decoration: none
+	&:hover
+		color: #E1001B 
+	a
+		font-size: 24px
+		color: #010101
+		text-decoration: none
+		+p_b
+		&:hover
+			color: #E1001B 
+	.preview__title-time
+		margin-right: 5px
+		font-size: 18px
+		+b_h
+	.preview__title-num
+		font-size: 18px
+		+b_h
+.preview_mod
+	.preview__title
+		color: #010101
+		font-size: 18px
+		+p_b
+		&:hover
+			color: #E1001B
+		a
+			color: #010101
+			font-size: 18px
+			&:hover
+				color: #E1001B 
+	.preview__title-time
+		font-size: 16px
+		font-weight: normal
+		+b
+	.preview__title-num
+		margin-left: 5px
+		font-size: 16px
+		color:  #e1001b 
+		+b_h
 
-
-// common blocks
+// nav
+.nav
+	+clr
+	a
+		margin-left: 15px
+		padding: 2px 5px
+		float: left
+		text-transform: uppercase
+		text-decoration: none
+		font-size: 14px
+		color: #000
+		border: 2px solid transparent
+		+p_b
+		&:hover
+			color: #E1001B
+		&:first-child
+			margin-left: 0
+		&.is-active
+			border: 2px solid #e1001b
+// primary-news
+.primary-news
+	+clr
+	overflow: hidden
+// news
+.news
+	li
+		margin-top: 30px
+	a
+		font-size: 16px
+		text-decoration: none
+		color: #000
+		&:hover
+			color: #e1001b 
+			.time
+				color: #e1001b 
+	.time
+		margin-right: 7px
+		font-size: 14px
+	.num
+		margin-left: 5px
+// last-news
+.last-news
+	font-size: 14px
+	color: #010101
+	.title-black
+		float: right
+	li
+		margin-top: 45px
+		+clr
+		a
+			display: block
+			margin-bottom: 15px
+			font-size: 18px
+			color: #000 
+			text-decoration: none
+			+p_b
+			&:hover
+				color: #e1001b
+		.last-news__date
+			margin-right: 5px
+			font-size: 16px
+			+b
+		.last-news__num
+			font-size: 14px
+			color: #E1001B
+			+b_h
+		.last-news__media
+			float: left
+			margin-right: 15px
+		.last-news__cont
+			float: left
+.last-news_mod
+	li
+		&:first-child
+			margin-top: 0
+.meta
+	overflow: hidden
+	.title
+		float: left
+.last-news__media
+	width: 130px
+	height: 80px
+	overflow: hidden
+	img
+		width: 100%
+// interview 
+.interview 
+	.meta
+		margin-bottom: 45px
+ 
