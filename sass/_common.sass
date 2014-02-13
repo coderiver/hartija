@@ -2,7 +2,7 @@
 
 /*------------------------- fonts -------------------------*/
 +font(ProximaNova-Reg, ProximaNova-Reg)
-=n
+=p
 	font-family: "ProximaNova-Reg", arial, sans-serif
 
 +font(ProximaNova-Bold, ProximaNova-Bold)
@@ -20,7 +20,7 @@
 body
 	font-size: 14px 
 	line-height: 1.2
-	+n
+	+p
 .out
 	width: 1235px
 	margin: 0 auto
@@ -28,6 +28,8 @@ body
 	padding: 50px 0
 	border-bottom: 3px solid #979797
 	overflow: hidden
+.wrap_mod
+	border-bottom: none 
 .title
 	text-transform: uppercase
 	font-size: 18px
@@ -40,6 +42,7 @@ body
 		+p_b
 // two-coll
 .title-black
+	text-transform: uppercase
 	text-decoration: underline
 	font-size: 18px
 	color: #000
@@ -281,6 +284,26 @@ body
 		font-size: 14px
 	.num
 		margin-left: 5px
+.news__prev
+	margin-top: 40px
+	display: inline-block
+	padding: 0px 5px
+	text-transform: uppercase
+	text-decoration: none
+	font-size: 14px
+	color: #000
+	border: 2px solid #000
+	+p_b
+	&:hover
+		border-color: #e1001b
+		.i-arr
+			+s(i-arr_h)
+	.i-arr
+		margin-right: 10px
+		vertical-align: middle
+	span
+		display: inline-block
+		vertical-align: middle
 // last-news
 .last-news
 	font-size: 14px
@@ -312,6 +335,9 @@ body
 			margin-right: 15px
 		.last-news__cont
 			float: left
+.archive
+	.title-black
+		float: right
 .last-news_mod
 	li
 		&:first-child
@@ -330,4 +356,116 @@ body
 .interview 
 	.meta
 		margin-bottom: 45px
- 
+
+.i-arr
+	display: inline-block
+	+s(i-arr)
+.i-play
+	display: inline-block
+	+s(i-play)
+.sidebar-in
+	.title
+		margin-bottom: 25px
+// media
+.media
+
+.media__item
+	margin-bottom: 30px
+.media__img
+	width: 215px
+	height: 133px
+	margin-bottom: 10px
+	overflow: hidden
+	position: relative
+	img
+		max-width: 100%
+	.i-play
+		position: absolute
+		right: 0
+		bottom: 0
+.media__title
+	margin-bottom: 5px
+	font-size: 16px
+	color: #000
+	text-decoration: none
+	+p_b
+	&:hover
+		text-decoration: underline
+	a
+		font-size: 16px
+		color: #000
+		text-decoration: none
+		+p_b
+		&:hover
+			text-decoration: underline
+.media__date
+	font-size: 12px
+	color: #979797
+// block
+.block-wrap
+	margin-bottom: 50px
+.block
+	margin-bottom: 20px
+	padding: 20px
+	border: 1px solid #979797
+	ul
+	li
+		margin-bottom: 10px
+		font-size: 14px
+	.block__1
+		width: 75px
+		display: inline-block
+
+	.block__2
+		+p_b
+	.block__3
+		color: #979797
+		+p_b
+.block__title
+	margin-bottom: 25px
+	text-transform: uppercase
+	color: #000
+	a
+		text-decoration: underline
+		color: #000
+		&:hover
+			text-decoration: none
+.block_mod
+	+clr
+	li
+		overflow: hidden
+		margin-bottom: 12px
+	.block__1
+		width: 50%
+		float: left
+		color: #000
+		+p
+	.block__2
+		width: 50%
+		float: left
+		color: #000
+		+p
+// opinion
+.opinion
+
+.opinion__item
+	margin-bottom: 25px
+	+p_b
+.opinion__title
+	margin-bottom: 5px
+	color: #000
+	text-decoration: none
+	font-weight: normal
+	+p
+	&:hover
+		color: #E1001B 
+	a
+		text-decoration: none
+		color: #000
+		font-size: 16px
+		&:hover
+			color: #E1001B
+.opinion__name
+	color: #979797
+	font-size: 12px
+	+b
