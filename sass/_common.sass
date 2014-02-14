@@ -21,6 +21,41 @@ body
 	font-size: 14px 
 	line-height: 1.2
 	+p
+	&.two-coll
+		.l-page
+			width: 935px
+		.out
+			width: 945px
+		.header__left
+			width: 240px
+		.header__center
+			margin: 0 265px 0 240px
+		.l-page
+			width: 635px
+		//
+		.last-news, .interview
+			li
+				.last-news__cont
+					float: none
+			.preview_mod
+				margin-bottom: 50px
+			.preview__media
+				width: 130px
+				height: 80px
+				float: left
+				margin-right: 15px
+		.interview
+			.l-page-1, .l-page-2
+				width: 630px
+		.archive
+			.l-page-1, .l-page-2
+				width: 630px
+		.footer__logo
+			li
+				&.footer__logo-5
+					margin-left: 100px
+		.footer__copy
+			width: 650px
 .out
 	width: 1235px
 	margin: 0 auto
@@ -285,6 +320,8 @@ body
 	.num
 		margin-left: 5px
 .news__prev
+	float: left
+	clear: both
 	margin-top: 40px
 	display: inline-block
 	padding: 0px 5px
@@ -296,6 +333,7 @@ body
 	+p_b
 	&:hover
 		border-color: #e1001b
+		color: #e1001b 
 		.i-arr
 			+s(i-arr_h)
 	.i-arr
