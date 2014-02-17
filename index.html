@@ -31,8 +31,8 @@
 				</div>
 			</div>
 			<div class="header__right-label">
-				<a href="#">Прислать новость</a>
-				<a href="#">Поиск</a>
+				<a href="#" class="add-news">Прислать новость</a>
+				<a href="#" class="js-search">Поиск</a>
 			</div>
 		</div>
 		<div class="header__center">
@@ -45,19 +45,32 @@
 				<a href="#" class="header__news-item js-news-hide">Бакиев поселился рядом с Лукашенк</a>
 			</div>
 		</div>
+		<div class="header__search">
+			<div class="header__search-row">
+				<div class="header__search-title">Поиск по сайту</div>
+				<a href="#" class="js-search-close header__search-close">закрыть</a>
+				<div class="header__search-form">
+					<div class="header__search-label">
+						<input type="text">
+						<button class="header__search-btn">найти</button>
+					</div>
+					<div class="header__search-label"><a href="#" class="header__search-all">Все разделы сайта</a></div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<!-- / .header -->
 
 	<!-- BEGIN primary-news -->
 	<div class="primary-news wrap l">
-		<div class="l-page-1">
+		<div class="l-col-1">
 			<div class="preview">
 				<div class="preview__media"><a href="#"><img src="img/news1.jpg" alt=""></a></div>
 				<h3 class="preview__title"><a href="#"><span class="preview__title-time">10:45</span>ПВО МО Беларуси готовит новые учения у границ ЕС <span class="preview__title-num">76</span></a></h3>
 				<p>Министерство обороны впервые проведет боевые учения войск с применением комплекса «Тор-М2».</p>
 			</div>
 		</div>
-		<div class="l-page-2">
+		<div class="l-col-2">
 			<nav class="nav">
 				<a href="#" class="is-active">главное за сегодня</a>
 				<a href="#">популярное</a>
@@ -89,7 +102,7 @@
 	</div>
 
 	<!-- / .primary-news -->
-	<div class="asd">
+	<div class="wrap-sidebar">
 		<!-- BEGIN sidebar -->
 		<div class="l-sidebar">
 			<div class="sidebar-in">
@@ -272,11 +285,9 @@
 				</div>
 				<!-- / .opinion -->
 			</div>
-
 		</div>
 		<!-- / .sidebar -->
 	</div>
-
 	<div class="l">
 		<div class="l-page">
 			<!-- BEGIN last-news -->
@@ -299,7 +310,10 @@
 						<p>ДТП произошло в Пинске вечером 4 января.</p>
 					</li>
 					<li>
-						<div class="last-news__media"><a href="#"><img src="img/media.jpg" alt=""></a></div>
+						<div class="last-news__media last-news__media_big">
+							<a href="#"><img src="img/media4.jpg" alt=""></a>
+							<i class="i-play"></i>
+						</div>
 						<div class="last-news__cont">
 							<a href="#"><span class="last-news__date">15:03</span>Ещё один «Сюрприз» для водителей: новые штрафы и обязательная зимняя резина<span class="last-news__num">117</span></a>
 							<p>За неправильную парковку теперь будут штрафовать не водителя, а владельца автомобиля</p>
@@ -330,7 +344,80 @@
 						<p>ДТП произошло в Пинске вечером 4 января.</p>
 					</li>
 					<li>
-						<div class="last-news__media"><a href="#"><img src="img/media.jpg" alt=""></a></div>
+						<div class="last-news__media">
+							<a href="#"><img src="img/news5.jpg" alt=""></a>
+							<i class="i-play"></i>
+						</div>
+						<div class="last-news__cont">
+							<a href="#"><span class="last-news__date">15:03</span>Ещё один «Сюрприз» для водителей: новые штрафы и обязательная зимняя резина<span class="last-news__num">117</span></a>
+							<p>За неправильную парковку теперь будут штрафовать не водителя, а владельца автомобиля</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><span class="last-news__date">13:29</span>Виталий Кличко: «Мало им не покажется» <span class="last-news__num">9</span></a>
+						<p>Чемпион мира по боксу пообещал украинским властям нокаут с одного удара</p>
+					</li>
+					<li>
+						<a href="#"><span class="last-news__date">13:01</span>Матч чемпионата Беларуси по хоккею сорван из-за пожара <span class="last-news__num">13</span></a>
+						<p>Российское федеральное агентство по рыболовству считает, что траулер «Олег Найденов» был задержан властями Сенегала по просьбе Greenpeace</p>
+					</li>
+					<li>
+						<a href="#"><span class="last-news__date">12:44</span>Пьяный пинчанин протаранил забор находясь за рулём угнанного автомобиля <span class="last-news__num">27</span></a>
+						<p>ДТП произошло в Пинске вечером 4 января.</p>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<a href="#"><span class="last-news__date">13:29</span>Виталий Кличко: «Мало им не покажется» <span class="last-news__num">9</span></a>
+						<p>Чемпион мира по боксу пообещал украинским властям нокаут с одного удара</p>
+					</li>
+					<li>
+						<a href="#"><span class="last-news__date">13:01</span>Матч чемпионата Беларуси по хоккею сорван из-за пожара <span class="last-news__num">13</span></a>
+						<p>Российское федеральное агентство по рыболовству считает, что траулер «Олег Найденов» был задержан властями Сенегала по просьбе Greenpeace</p>
+					</li>
+					<li>
+						<a href="#"><span class="last-news__date">12:44</span>Пьяный пинчанин протаранил забор находясь за рулём угнанного автомобиля <span class="last-news__num">27</span></a>
+						<p>ДТП произошло в Пинске вечером 4 января.</p>
+					</li>
+					<li>
+						<div class="last-news__media">
+							<a href="#"><img src="img/news5.jpg" alt=""></a>
+							<i class="i-play"></i>
+						</div>
+						<div class="last-news__cont">
+							<a href="#"><span class="last-news__date">15:03</span>Ещё один «Сюрприз» для водителей: новые штрафы и обязательная зимняя резина<span class="last-news__num">117</span></a>
+							<p>За неправильную парковку теперь будут штрафовать не водителя, а владельца автомобиля</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><span class="last-news__date">15:03</span>Домрачева завоевала «бронзу» в Оберхофе <span class="last-news__num">117</span></a>
+						<p>Правоохранители Одесской области уверяют, что памятник Ленину, который ранее якобы повалил неизвестный, упал без посторонней помощи</p>
+					</li>
+					<li>
+						<a href="#"><span class="last-news__date">14:46</span>Милиция: Памятник Ленину упал сам <span class="last-news__num">98</span></a>
+						<p>Белорусская биатлонистка заняла третье место в гонке с общего старта на 12,5 км с четырьмя огневыми рубежами</p>
+					</li>
+					<li>
+						<a href="#"><span class="last-news__date">14:31</span>Польско-белорусскую границу в Кузнице можно перейти пешком  <span class="last-news__num">215</span></a>
+						<p>Пешеходный переход начал работать с 1 января 2014 года</p>
+					</li>
+					<li>
+						<a href="#"><span class="last-news__date">13:29</span>Виталий Кличко: «Мало им не покажется» <span class="last-news__num">9</span></a>
+						<p>Чемпион мира по боксу пообещал украинским властям нокаут с одного удара</p>
+					</li>
+					<li>
+						<a href="#"><span class="last-news__date">13:01</span>Матч чемпионата Беларуси по хоккею сорван из-за пожара <span class="last-news__num">13</span></a>
+						<p>Российское федеральное агентство по рыболовству считает, что траулер «Олег Найденов» был задержан властями Сенегала по просьбе Greenpeace</p>
+					</li>
+					<li>
+						<a href="#"><span class="last-news__date">12:44</span>Пьяный пинчанин протаранил забор находясь за рулём угнанного автомобиля <span class="last-news__num">27</span></a>
+						<p>ДТП произошло в Пинске вечером 4 января.</p>
+					</li>
+					<li>
+						<div class="last-news__media">
+							<a href="#"><img src="img/news5.jpg" alt=""></a>
+							<i class="i-play"></i>
+						</div>
 						<div class="last-news__cont">
 							<a href="#"><span class="last-news__date">15:03</span>Ещё один «Сюрприз» для водителей: новые штрафы и обязательная зимняя резина<span class="last-news__num">117</span></a>
 							<p>За неправильную парковку теперь будут штрафовать не водителя, а владельца автомобиля</p>
@@ -354,14 +441,14 @@
 			<!-- BEGIN interview -->
 			<div class="interview wrap">
 				<div class="meta"><h3 class="title">Интервью</h3></div>
-				<div class="l-page-1">
+				<div class="l-col-1">
 					<div class="preview preview_mod">
 						<div class="preview__media"><a href="#"><img src="img/news2.jpg" alt=""></a></div>
 						<h3 class="preview__title"><a href="#"><span class="preview__title-time">01.02.14</span>Брюс Джексон: Проблемы Беларуси не будут решены при Лукашенко<span class="preview__title-num">215</span></a></h3>
 						<p>США могли бы сделать больше для свободы Беларуси, считает влиятельный американский политик.</p>
 					</div>
 				</div>
-				<div class="l-page-2">
+				<div class="l-col-2">
 					<div class="last-news last-news_mod">
 						<ul>
 							<li>
@@ -387,7 +474,7 @@
 					<h3 class="title">ранее за сегодня</h3>
 					<a href="#" class="title-black">архив новостей</a>
 				</div>
-				<div class="l-page-1">
+				<div class="l-col-1">
 					<div class="news">
 						<ul>
 							<li>
@@ -405,7 +492,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="l-page-2">
+				<div class="l-col-2">
 					<div class="news">
 						<ul>
 							<li>
