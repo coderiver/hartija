@@ -21,20 +21,54 @@ body
 	font-size: 14px 
 	line-height: 1.2
 	+p
+	&.two-coll
+		.last-news_list 
+			margin-right: -30px
+			.meta
+				margin-right: 30px
+			ul
+				margin-right: 30px
+				width: 470px
+				float: left
+			li
+				.last-news__cont
+					// float: none
+			.preview_mod
+				margin-bottom: 50px
+			.preview__media
+				width: 130px
+				height: 80px
+				float: left
+				margin-right: 17px
+			.last-news__media_big
+				width: auto
+				max-width: 470px 
+				height: inherit
+				margin-bottom: 20px
 	+r(pda)
 		.l-page
 			width: 935px
 		.out
 			width: 945px
+			// margin: 0 20px
 		.header__left
 			width: 240px
 		.header__center
 			margin: 0 265px 0 240px
+		.header__search 
+			.header__search-form 
+				input
+					width: 530px
 		.l-page
 			width: 635px
 		.interview
 			.l-col-1, .l-col-2
 				width: 630px
+			.preview__media
+				width: 128px
+				height: 78px
+				float: left
+				margin-right: 20px
 		.archive
 			.l-col-1, .l-col-2
 				width: 630px
@@ -46,53 +80,11 @@ body
 			width: 650px
 		.header__news-item_last 
 			display: none
-	&.two-coll
-		// .l-page
-		// 	width: 935px
-		// .out
-		// 	width: 945px
-		// .header__left
-		// 	width: 240px
-		// .header__center
-		// 	margin: 0 265px 0 240px
-		// .l-page
-		// 	width: 635px
-		
-		.last-news 
-			margin-right: -30px
-			.meta
-				margin-right: 30px
-			ul
-				margin-right: 30px
-				width: 470px
-				float: left
-			li
-				.last-news__cont
-					float: none
-			.preview_mod
-				margin-bottom: 50px
-			.preview__media
-				width: 130px
-				height: 80px
-				float: left
-				margin-right: 17px
-			.last-news__media_big
-				width: auto
-				max-width: 470px 
-				height: 275px
-				margin-bottom: 20px
-		// .interview
-		// 	.l-page-1, .l-page-2
-		// 		width: 630px
-		// .archive
-		// 	.l-page-1, .l-page-2
-		// 		width: 630px
-		// .footer__logo
-		// 	li
-		// 		&.footer__logo-5
-		// 			margin-left: 100px
-		// .footer__copy
-		// 	width: 650px
+		&.two-coll
+			.last-news_list
+				ul
+					width: 300px
+
 
 
 .out
@@ -351,9 +343,15 @@ body
 	width: 450px
 	height: 280px
 	overflow: hidden
-	margin-bottom: 15px
+	margin-bottom: 15px 
+	position: relative
 	img
-		max-width: 100% 
+		max-width: 100%
+		display: block
+	.i-play
+		position: absolute
+		bottom: 0
+		right: 0
 .preview__title
 	margin-bottom: 13px
 	font-size: 24px
@@ -472,7 +470,7 @@ body
 		+clr
 		a
 			display: block
-			margin-bottom: 15px
+			// margin-bottom: 15px
 			font-size: 18px
 			color: #000 
 			text-decoration: none
@@ -491,7 +489,7 @@ body
 			float: left
 			margin-right: 15px
 		.last-news__cont
-			float: left
+			// float: left
 .archive
 	.title-black
 		float: right
@@ -510,6 +508,7 @@ body
 	overflow: hidden
 	position: relative
 	img
+		display: block
 		width: 100%
 	.i-play
 		position: absolute

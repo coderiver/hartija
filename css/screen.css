@@ -31,23 +31,25 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
 /*------------------------- general ------------------------- */
 body { font-size: 14px; line-height: 1.2; font-family: "ProximaNova-Reg", arial, sans-serif; }
+body.two-coll .last-news_list { margin-right: -30px; }
+body.two-coll .last-news_list .meta { margin-right: 30px; }
+body.two-coll .last-news_list ul { margin-right: 30px; width: 470px; float: left; }
+body.two-coll .last-news_list .preview_mod { margin-bottom: 50px; }
+body.two-coll .last-news_list .preview__media { width: 130px; height: 80px; float: left; margin-right: 17px; }
+body.two-coll .last-news_list .last-news__media_big { width: auto; max-width: 470px; height: inherit; margin-bottom: 20px; }
 @media only screen and (max-width: 1250px) { body .l-page { width: 935px; }
   body .out { width: 945px; }
   body .header__left { width: 240px; }
   body .header__center { margin: 0 265px 0 240px; }
+  body .header__search .header__search-form input { width: 530px; }
   body .l-page { width: 635px; }
   body .interview .l-col-1, body .interview .l-col-2 { width: 630px; }
+  body .interview .preview__media { width: 128px; height: 78px; float: left; margin-right: 20px; }
   body .archive .l-col-1, body .archive .l-col-2 { width: 630px; }
   body .footer__logo li.footer__logo-5 { margin-left: 100px; }
   body .footer__copy { width: 650px; }
-  body .header__news-item_last { display: none; } }
-body.two-coll .last-news { margin-right: -30px; }
-body.two-coll .last-news .meta { margin-right: 30px; }
-body.two-coll .last-news ul { margin-right: 30px; width: 470px; float: left; }
-body.two-coll .last-news li .last-news__cont { float: none; }
-body.two-coll .last-news .preview_mod { margin-bottom: 50px; }
-body.two-coll .last-news .preview__media { width: 130px; height: 80px; float: left; margin-right: 17px; }
-body.two-coll .last-news .last-news__media_big { width: auto; max-width: 470px; height: 275px; margin-bottom: 20px; }
+  body .header__news-item_last { display: none; }
+  body.two-coll .last-news_list ul { width: 300px; } }
 
 .out { width: 1235px; margin: 0 auto; }
 
@@ -141,8 +143,9 @@ body.two-coll .last-news .last-news__media_big { width: auto; max-width: 470px; 
 .lang.is-hide a { font-size: 0; }
 .lang .is-active { color: black; text-decoration: underline; }
 
-.preview__media { width: 450px; height: 280px; overflow: hidden; margin-bottom: 15px; }
-.preview__media img { max-width: 100%; }
+.preview__media { width: 450px; height: 280px; overflow: hidden; margin-bottom: 15px; position: relative; }
+.preview__media img { max-width: 100%; display: block; }
+.preview__media .i-play { position: absolute; bottom: 0; right: 0; }
 
 .preview__title { margin-bottom: 13px; font-size: 24px; color: #010101; text-decoration: none; }
 .preview__title:hover { color: #e1001b; }
@@ -185,12 +188,11 @@ body.two-coll .last-news .last-news__media_big { width: auto; max-width: 470px; 
 .last-news .title-black { float: right; }
 .last-news li { margin-top: 45px; *zoom: 1; }
 .last-news li:after { content: " "; display: table; clear: both; }
-.last-news li a { display: block; margin-bottom: 15px; font-size: 18px; color: black; text-decoration: none; font-family: "ProximaNova-Bold", arial, sans-serif; }
+.last-news li a { display: block; font-size: 18px; color: black; text-decoration: none; font-family: "ProximaNova-Bold", arial, sans-serif; }
 .last-news li a:hover { color: #e1001b; }
 .last-news li .last-news__date { margin-right: 5px; font-size: 16px; font-family: "BlissPro-Regular", arial, sans-serif; }
 .last-news li .last-news__num { font-size: 14px; color: #e1001b; font-family: "BlissPro-Heavy", arial, sans-serif; }
 .last-news li .last-news__media { float: left; margin-right: 15px; }
-.last-news li .last-news__cont { float: left; }
 
 .archive .title-black { float: right; }
 
@@ -200,7 +202,7 @@ body.two-coll .last-news .last-news__media_big { width: auto; max-width: 470px; 
 .meta .title { float: left; }
 
 .last-news__media { width: 128px; height: 78px; border: 1px solid #f3f3f3; overflow: hidden; position: relative; }
-.last-news__media img { width: 100%; }
+.last-news__media img { display: block; width: 100%; }
 .last-news__media .i-play { position: absolute; bottom: 0; right: 0; }
 
 .interview .meta { margin-bottom: 45px; }

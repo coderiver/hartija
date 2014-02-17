@@ -13,22 +13,16 @@ $(document).ready(function() {
 
 
 
-	// $('.js-search').click(function(event) {
-	// 	if ($(this).hasClass('is-active')){
-	// 		$(this).removeClass("is-active");
-	// 	  $(this).html("поиск");
-	// 	  $(this).parents(".header").addClass("is-search");
-	// 	  $(".header__search").hide();
-	// 	  $(".header__left").show();
-	// 	  $(".header__center").show();
-	// 	}
-	//   else{
-	//  	 	$(this).addClass("is-active");
-	//     $(this).html("закрыть");
-	//     $(this).parents(".header").removeClass("is-search");
-	//     $(".header__search").show();
-	//     $(".header__left").hide();
-	//     $(".header__center").hide();
-	//   }
-	//  });
+	$('.js-two-coll').click(function(event) {
+		if ($(this).hasClass('is-active')){
+			$(this).removeClass("is-active");
+		  $(this).html("в две колонки");
+		  $(this).parents(".last-news").find(".last-news__in").removeClass("is-coll");
+		}
+	  else{
+	 	 	$(this).addClass("is-active");
+	    $(this).html("списком");
+	    $(this).parents(".last-news").find(".last-news__in").addClass("is-coll");
+	  }
+	 });
 });
